@@ -6,82 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="The answer is "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAdd"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:text="+"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtract"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtVariable2" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnSubtract"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivide"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btnModulo"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnMultiply"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnMultiply"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="X"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintEnd_toStartOf="@+id/btnModulo"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnDivide"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnDivide"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="/"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiply"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnSubtract"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/txtResult"
+        app:layout_constraintTop_toTopOf="@+id/txtResult" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="356dp"
+        android:text="The answer is "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtAnswer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtOperand1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -92,42 +92,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtOperand2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Second Variable"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/txtVariable1"
         app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintStart_toStartOf="@+id/txtVariable1"
+        app:layout_constraintTop_toBottomOf="@+id/txtVariable1" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/txtVariable1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
+        android:text="0.0"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/txtOperand1"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/txtOperand1"
+        app:layout_constraintTop_toBottomOf="@+id/txtOperand1"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal2"
+        android:id="@+id/txtVariable2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:text="0.0"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/txtOperand2"
         app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/txtOperand2"
+        app:layout_constraintTop_toBottomOf="@+id/txtOperand2"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

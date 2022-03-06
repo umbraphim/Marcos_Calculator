@@ -10,11 +10,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-     EditText txtVariable1, txtVariable2;
-     Button btnAdd, btnSubtract, btnDivide, btnModulo, btnMultiply;
-     TextView txtAnswer;
-
-
+    EditText txtVariable1, txtVariable2;
+    Button btnAdd, btnSubtract, btnDivide, btnModulo, btnMultiply;
+    TextView txtAnswer;
 
 
     @Override
@@ -33,9 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtAnswer = findViewById(R.id.txtAnswer);
 
 
-
-
-
         btnAdd.setOnClickListener(this);
         btnSubtract.setOnClickListener(this);
         btnDivide.setOnClickListener(this);
@@ -43,11 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMultiply.setOnClickListener(this);
 
 
-
     }
 
     @Override
-    public void onClick(View v){
+    public void onClick(View v) {
 
         double variable1, variable2, answer;
 
@@ -55,39 +49,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         variable2 = Double.parseDouble(String.valueOf(txtVariable2.getText()));
 
 
-
-        switch (v.getId()){
+        switch (v.getId()) {
 
             case R.id.btnAdd:
                 //code
-                answer = variable1 + variable2;
-                txtAnswer.setText(String.valueOf(answer));
+                txtAnswer.setText(String.valueOf(add(variable1, variable2)));
                 break;
             case R.id.btnSubtract:
                 //code
-                answer = variable1 - variable2;
-                txtAnswer.setText(String.valueOf(answer));
+                txtAnswer.setText(String.valueOf(subtract(variable1, variable2)));
                 break;
             case R.id.btnDivide:
                 //code
-                answer = variable1 / variable2;
-                txtAnswer.setText(String.valueOf(answer));
+                txtAnswer.setText(String.valueOf(divide(variable1, variable2)));
                 break;
             case R.id.btnModulo:
                 //code
-                answer = variable1 % variable2;
-                txtAnswer.setText(String.valueOf(answer));
+                txtAnswer.setText(String.valueOf(modulo(variable1, variable2)));
                 break;
             case R.id.btnMultiply:
                 //code
-                answer = variable1 * variable2;
-                txtAnswer.setText(String.valueOf(answer));
+                txtAnswer.setText(String.valueOf(multiply(variable1, variable2)));
                 break;
 
         }
-
     }
-
-
-
+    //datatype name(datatype parameter1, datatype parameter2){return para1 para2}
+    double add(double variable1, double variable2){return variable1 + variable2;}
+    double subtract(double variable1, double variable2){return variable1 - variable2;}
+    double divide(double variable1, double variable2){return variable1 / variable2;}
+    double modulo(double variable1, double variable2){return variable1 % variable2;}
+    double multiply(double variable1, double variable2){return variable1 * variable2;}
 }
+
+
+
+
